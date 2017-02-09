@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <acme-navbar></acme-navbar>
+  </div>
+  <div class="row">
+    <div class="large-12 large-text-center columns">
+      <div class="panel">
+        <h1>Current Events</h1>
+        <p>This is a simple app to demonstrate the use of a Tableau directive, relying on public Tableau dashboards. <br/>The buttons below modify the parameter of the first dashboard.</p>
+        <a ng-click="PoliticsCtrl.filter1()" class="button success animated infinite">2012</a>
+        <a ng-click="PoliticsCtrl.filter2()" class="button success animated infinite">1919</a>
+        <div ng-controller="PoliticsTableauController as TableauCtrl">
+            <tableau-visualization width="1000" height="900" url="public.tableau.com/views/InequalityintheUnitedStates_0/WealthShares">
+            </tableau-visualization>
+        </div>
+
+        <div ng-controller="PoliticsTableauController as TableauCtrl">
+            <tableau-visualization width="1200" height="3500" url="public.tableau.com/views/WomeninPolitics_0/Visualization">
+            </tableau-visualization>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

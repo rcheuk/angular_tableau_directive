@@ -1,0 +1,36 @@
+<div class="container">
+
+  <div>
+    <acme-navbar></acme-navbar>
+  </div>
+
+  <div class="row">
+    <div class="large-12 large-text-center columns">
+      <div class="panel">
+        <h1>'Allo, 'Allo!</h1>
+        <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
+        <p>Thanks for visiting!</p>
+        <p>
+          <a href="/#/politics" class="button success animated infinite" ng-class="main.classAnimation" ng-click="main.showToastr()">Let's Get Started!</a>
+        </p>
+        <p>
+          With ♥ thanks to Tableau authors <acme-malarkey extra-values="['Chloe Tseng', 'Takashi Ohno', 'Gabe DeWitt', 'Nicco Cirone']"></acme-malarkey>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-4 columns" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
+      <div class="thumbnail">
+        <img class="right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
+        <div class="caption">
+          <h3>{{ awesomeThing.title }}</h3>
+          <p>{{ awesomeThing.description }}</p>
+          <p><a ng-href="{{ awesomeThing.url }}">{{ awesomeThing.url }}</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

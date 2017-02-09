@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <acme-navbar></acme-navbar>
+  </div>
+  <div class="row">
+    <div class="large-12 large-text-center columns">
+      <div class="panel">
+        <h1>Climate Change</h1>
+        <p>This is a simple app to demonstrate the use of a Tableau directive, relying on public Tableau dashboards. <br/>The buttons below modify the filters applied to the first Tableau dashboard on melting ice.</p>
+        <a ng-click="ClimateCtrl.filter()" class="button success animated infinite">Filter</a>
+        <a ng-click="ClimateCtrl.reset()" class="button alert animated infinite">Reset</a>
+        <div ng-controller="ClimateTableauController as TableauCtrl">
+            <tableau-visualization width="1000" height="1000" url="public.tableau.com/views/Theiceismelting_/Theiceismelting_">
+            </tableau-visualization>
+        </div>
+
+        <div ng-controller="ClimateTableauController as TableauCtrl">
+            <tableau-visualization width="1000" height="1200" url="public.tableau.com/views/CarbonStorageLocations-WorldView/Dashboard8">
+            </tableau-visualization>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
