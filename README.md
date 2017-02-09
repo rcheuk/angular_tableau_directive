@@ -2,6 +2,8 @@
 
 This is a simple application that demonstrates the use of an AngularJS directive for displaying Tableau dashboards. 
 
+To get started, make sure you have node/npm, gulp, and bower installed. Then run `npm install && bower install` followed by `gulp serve` to start the server. 
+
 ## Overview
 
 This application was scaffolded using Yeoman's Gulp-Angular generator. It relies on Public Tableau Dashboards to demonstrate usage.
